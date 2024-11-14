@@ -1,0 +1,11 @@
+digraph {
+	ViewieCodeVisualizer [shape=box]
+	ViewieCodeVisualizer -> __init__ [label=__init__]
+	ViewieCodeVisualizer -> parse_code [label=parse_code]
+	ViewieCodeVisualizer -> code_extraction [label=code_extraction]
+	ViewieCodeVisualizer -> uml_generation [label=uml_generation]
+	__init__ [shape=ellipse]
+	parse_code [shape=ellipse]
+	code_extraction [shape=ellipse]
+	uml_generation [shape=ellipse]
+}
