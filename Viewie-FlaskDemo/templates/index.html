@@ -1,4 +1,4 @@
-  <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -20,22 +20,24 @@
     <div class="container">
         <h1 class="text-center mt-4">Welcome to Viewie: A Code Source Visualizer!</h1>
         <h2 class="text-center mt-4">Input your Python Code :D</h2>
-        <h3 class="text-center mt-4">Soon to come: Javascript and Java :)</h3>>
-        <form id="codeForm" class="mt-4">
+        <h3 class="text-center mt-4">Soon to come: Javascript and Java :)</h3>
+
+        <!-- File Upload Form -->
+        <form id="codeForm" class="mt-4" enctype="multipart/form-data">
             <div class="form-group">
-                <textarea class="form-control" id="code" rows="10"
-                          style="resize: vertical;" placeholder="Please upload your source code :)"></textarea>
+                <label for="fileUpload">Upload Python Files (.py):</label>
+                <input type="file" class="form-control" id="fileUpload" accept=".py" multiple>
+            </div>
+            <div class="form-group">
+                <textarea class="form-control" id="code" rows="10" style="resize: vertical;" placeholder="Please upload your source code :)"></textarea>
             </div>
 
-            <!-- Displays the submit button and error code next to it rather than below it-->
             <div style="display: flex; align-items: center;">
-            <button type="submit" class="btn btn-primary">Upload</button>
-                <!-- displays the error code if textbox is empty -->
-            <div id="output" class="ml-2"></div> <!-- Add margin to the left -->
-        </div>
+                <button type="submit" class="btn btn-primary">Upload</button>
+                <div id="output" class="ml-2"></div> <!-- Error message display -->
+            </div>
         </form>
 
-        <!-- buttons for both the tidy tree from d3.js and force directed tree -->
         <div id="visualization-container">
             <div id="button-container" class="mt-4">
                 <button id="showUML" class="btn btn-secondary">Show UML Diagram</button>
@@ -44,7 +46,6 @@
             </div>
             <div id="visualization" class="mt-4" style="display: flex; justify-content: space-around;"></div>
         </div>
-
     </div>
 
     <script src="/static/script.js" type="module"></script>

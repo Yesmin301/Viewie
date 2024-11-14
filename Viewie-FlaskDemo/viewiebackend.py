@@ -1,12 +1,9 @@
 import ast
 import os
-
 import graphviz
-
 
 class ViewieCodeVisualizer:
     def __init__(self):
-        # No display_widget needed
         pass
 
     def parse_code(self, code):
