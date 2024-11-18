@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap Link -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <!-- CSS Link -->
+    <link rel="stylesheet" href="/static/style.css">
+
+    <!-- Font Link -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:100,100i,300,300i,400,400i,500,500i,700,700i"
+          rel="stylesheet"/>
+
+    <!-- Project Name -->
+    <title>Viewie - Source Code Visualizer</title>
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center mt-4">Welcome to Viewie: A Code Source Visualizer!</h1>
+        <h2 class="text-center mt-4">Input your Python Code :D</h2>
+        <h3 class="text-center mt-4">Soon to come: Javascript and Java :)</h3>
+
+        <!-- File Upload Form -->
+        <form id="codeForm" class="mt-4" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="fileUpload">Upload Python Files (.py):</label>
+                <input type="file" class="form-control" id="fileUpload" accept=".py" multiple>
+            </div>
+            <div class="form-group">
+                <textarea class="form-control" id="code" rows="10" style="resize: vertical;" placeholder="Please upload your source code :)"></textarea>
+            </div>
+
+            <div style="display: flex; align-items: center;">
+                <button type="submit" class="btn btn-primary">Upload</button>
+                <div id="output" class="ml-2"></div> <!-- Error message display -->
+            </div>
+        </form>
+
+        <div id="visualization-container">
+            <div id="button-container" class="mt-4">
+                <button id="showUML" class="btn btn-secondary">Show UML Diagram</button>
+                <button id="showForceDirected" class="btn btn-secondary">Show Force-Directed Graph</button>
+                <button id="showTidyTree" class="btn btn-secondary">Show Tidy Tree</button>
+            </div>
+            <div id="visualization" class="mt-4" style="display: flex; justify-content: space-around;"></div>
+        </div>
+    </div>
+
+    <script src="/static/script.js" type="module"></script>
+    <script src="/static/tidyTree.js" type="module"></script>
+    <script src="/static/forceDirectedGraph.js" type="module"></script>
+</body>
+</html>
