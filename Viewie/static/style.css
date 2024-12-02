@@ -1,0 +1,119 @@
+body {
+    font-family: 'Roboto Mono', monospace !important;  /* Monospace font for code-like appearance */
+    background: #fcf6b1 !important;                     /* Dark background */
+    color: #ffffff !important;                             /* White text */
+    padding-bottom: 200px;
+}
+
+#visualization {
+    background-color: #ffffff; /* Set background color */
+}
+
+h1, h2, h3 {
+    text-shadow: 2px 2px 4px rgba(184, 12, 9, 0.6);      /* Add shadow for depth */
+}
+
+.form-group textarea {
+    background-color: #a9e5bb; /* Muted blue for the text area */
+    border: 2px solid #fc3e00; /* Light gray border */
+    resize: none;              /* Disable resizing */
+    border-radius: 5px;        /* Rounded corners */
+    padding: 10px;             /* Padding for better text placement */
+}
+
+.form-group textarea:focus {
+    outline: none;               /* Remove the default focus outline */
+    box-shadow: #a9e5bb;           /* Remove any default box shadow */
+    border: 1px solid #a9e5bb;  /* Optional: keep the border style you want */
+    color: #0090CC;              /* Color for text inside text box. */
+}
+
+textarea::placeholder {
+    color: #444444 !important;
+    opacity: 0.6 !important;
+}
+
+#code {
+    resize: vertical;
+}
+
+#output {
+    font-weight: bold;
+    color: #fc3e00;                                   /* Neon green for output text */
+}
+
+button:focus {
+    outline: none;
+ }
+
+.btn-primary {
+    background-color: #fc3e00 !important;
+    border: none !important;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    color: white;
+    appearance: none;
+}
+
+.btn-primary:hover {
+    background-color: #b80c09 !important;
+}
+
+.btn-primary:focus {
+    outline: none !important;
+    box-shadow: none !important;
+    background-color: #b80c09 !important;
+}
+
+.btn-primary:active {
+    background-color: #b80c09 !important;
+    transform: scale(0.95);
+    box-shadow: none !important;
+}
+/* Style for the label to match the header's border and shadow */
+.file-label {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 16px;
+    color: #ffffff; /* Match header text color */
+    text-shadow: 2px 2px 4px rgba(184, 12, 9, 0.6); /* Match header shadow */
+    margin-bottom: 10px; /* Add spacing between label and file input */
+    display: inline-block;
+}
+
+/* Style for the file input */
+#fileUpload {
+    appearance: none; /* Remove default browser styling */
+    background-color: #a9e5bb; /* Match textarea background */
+    border: 2px solid #fc3e00; /* Match textarea border */
+    border-radius: 5px; /* Rounded corners */
+    color: #0090CC; /* Match textarea text color */
+    padding: 10px 15px; /* Add padding for a better look */
+    cursor: pointer;
+    font-family: 'Roboto Mono', monospace; /* Match font style */
+    font-size: 16px; /* Adjust font size for readability */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+}
+
+/* Hover, focus, and active states for file input */
+#fileUpload:hover {
+    border-color: #b80c09; /* Highlight border on hover */
+}
+
+#fileUpload:focus {
+    outline: none;
+    border-color: #b80c09; /* Highlight border on focus */
+    box-shadow: 0 0 5px rgba(184, 12, 9, 0.6); /* Add a subtle glow */
+}
+
+#fileUpload:active {
+    transform: scale(0.95); /* Slight scaling on click */
+}
+
+/* Hide the default file input styling but keep functionality */
+#fileUpload::-webkit-file-upload-button {
+    visibility: hidden;
+}
+
+#fileUpload::file-selector-button {
+    display: none;
+}
