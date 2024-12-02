@@ -9,7 +9,7 @@ body {
     background-color: #ffffff; /* Set background color */
 }
 
-h1, h2, h3 {
+h1, h2, h3, h4{
     text-shadow: 2px 2px 4px rgba(184, 12, 9, 0.6);      /* Add shadow for depth */
 }
 
